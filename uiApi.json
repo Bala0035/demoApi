@@ -1,0 +1,62 @@
+[
+   {
+      "layout":"vertical",
+      "components":[
+         {
+            "type":"text",
+            "text":"Seafood Recommendation",
+            "style":{
+               "color":"green",
+               "font-size":"24px",
+               "font-weight":"bold"
+            }
+         },
+         {
+            "type":"radioGroup",
+            "label":"Select your preference:",
+            "options":[
+               {
+                  "label":"Fish",
+                  "value":"fish"
+               },
+               {
+                  "label":"Shrimp",
+                  "value":"shrimp"
+               },
+               {
+                  "label":"Crab",
+                  "value":"crab"
+               }
+            ]
+         },
+         {
+            "type":"button",
+            "text":"Get Recommendation",
+            "style":{
+               "background-color":"blue",
+               "color":"white"
+            },
+            "action":{
+               "type":"request",
+               "url":"https://seafood-recommendations-api.com/api/recommendation?preference={selectedPreference}"
+            }
+         },
+         {
+            "type":"text",
+            "text":"Recommended Seafood:",
+            "style":{
+               "font-size":"18px",
+               "font-weight":"bold",
+               "margin-top":"20px"
+            }
+         },
+         {
+            "type":"text",
+            "text":"{recommendedDish}",
+            "style":{
+               "margin-top":"10px"
+            }
+         }
+      ]
+   }
+]
